@@ -1029,3 +1029,83 @@ footer small {
   }
 
 }
+
+
+/* =========================================
+   JAVASCRIPT ANIMATION ELEMENTS
+========================================= */
+
+.particle-container {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+
+  width: 2px;
+  height: 2px;
+
+  border-radius: 50%;
+
+  background: #39b6ff;
+
+  box-shadow:
+    0 0 10px #39b6ff;
+
+  opacity: 0;
+
+  animation:
+    particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+
+  20% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(30px, -180px, 0);
+  }
+
+}
+
+
+/* Smooth animated text */
+
+.hero-word,
+.genre-word {
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+
+/* Scroll reveal */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
