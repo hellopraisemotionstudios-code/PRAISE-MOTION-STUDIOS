@@ -4,503 +4,383 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Praise Motion Studios creates cinematic book trailers and thoughtful promotional experiences that help authors bring their stories to life.">
 
-  <title>Praise Motion Studios | Where Books Become Cinematic Experiences</title>
+  <title>Praise Motion Studios | Stories in Motion</title>
 
-  <meta name="description" content="Praise Motion Studios transforms powerful books and stories into cinematic trailers and unforgettable promotional experiences for authors.">
-
-  <!-- Premium Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- =========================
-     CINEMATIC BACKGROUND
-========================= -->
-
-<div class="cinematic-bg">
-  <div class="blue-light light-one"></div>
-  <div class="blue-light light-two"></div>
-  <div class="blue-light light-three"></div>
-  <div class="film-grain"></div>
-</div>
-
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
-<header class="navbar">
-
-  <a href="#home" class="logo">
-    <span>PRAISE</span>
-    <small>MOTION STUDIOS</small>
+<header class="header">
+  <a class="brand" href="#home">
+    <span class="brand-name">PRAISE MOTION</span>
+    <span class="brand-subtitle">STUDIOS</span>
   </a>
 
-  <nav>
-    <a href="#about">About</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+
+  <nav class="navigation" id="navigation">
+    <a href="#about">Our Story</a>
     <a href="#genres">Genres</a>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
+    <a href="#services">What We Do</a>
+    <a href="#pricing">Packages</a>
+    <a href="#contact" class="nav-contact">Start a Project</a>
   </nav>
-
 </header>
-
 
 <main>
 
-<!-- =========================
-     HERO
-========================= -->
+  <!-- CINEMATIC VIDEO INTRO -->
+  <section class="hero" id="home">
 
-<section id="home" class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <source src="book-background.mp4" type="video/mp4">
+    </video>
 
-  <div class="hero-content">
+    <div class="hero-shade"></div>
 
-    <div class="eyebrow">
-      BOOK TRAILERS • AUTHOR PROMOTION • STORYTELLING
+    <div class="hero-content">
+      <p class="eyebrow">THE ART OF VISUAL STORYTELLING</p>
+
+      <h1>
+        Every book holds<br>
+        <em>a world worth seeing.</em>
+      </h1>
+
+      <p class="hero-description">
+        We turn the stories authors write into cinematic
+        experiences that capture attention, spark emotion
+        and invite readers into another world.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#services" class="button button-light">Discover Our Work</a>
+        <a href="#contact" class="text-link">Create with us <span>↗</span></a>
+      </div>
     </div>
 
-    <h1>
-      YOUR BOOK<br>
-      DESERVES TO BE<br>
-
-      <span class="hero-word">
-        SEEN.
-      </span>
-
-    </h1>
-
-    <p class="hero-description">
-      We transform written worlds into cinematic experiences
-      that make readers stop, feel, remember — and want to know more.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a href="#services" class="button primary">
-        Explore Our World
-      </a>
-
-      <a href="#contact" class="button secondary">
-        Bring Your Story to Life
-      </a>
-
+    <div class="hero-bottom">
+      <span>BOOK TRAILERS · AUTHOR VISIBILITY · CREATIVE PROMOTION</span>
+      <a href="#about">SCROLL TO EXPLORE ↓</a>
     </div>
 
-  </div>
+  </section>
 
 
-  <!-- CINEMATIC BOOK VISUAL -->
+  <!-- ABOUT THE COMPANY -->
+  <section class="section about" id="about">
+    <div class="section-kicker">01 / OUR STORY</div>
 
-  <div class="book-scene">
+    <div class="about-layout">
 
-    <div class="orbit orbit-one"></div>
-    <div class="orbit orbit-two"></div>
+      <div class="about-heading">
+        <p class="small-label">BEYOND THE WRITTEN PAGE</p>
+        <h2>
+          Some stories<br>
+          deserve to be<br>
+          <em>experienced.</em>
+        </h2>
+      </div>
 
-    <div class="book">
+      <div class="about-copy">
+        <p class="lead">
+          Praise Motion Studios is a creative studio dedicated
+          to bringing books into the visual world.
+        </p>
 
-      <div class="book-cover">
+        <p>
+          A book can transport its reader into another life,
+          another time or an entirely imagined world. We believe
+          that experience should not end on the page.
+        </p>
 
-        <div class="book-line"></div>
+        <p>
+          We work with authors to translate the atmosphere,
+          characters, themes and emotional heart of their books
+          into cinematic trailers and thoughtful promotional content.
+          Every story has its own identity, and our creative approach
+          begins by understanding what makes yours different.
+        </p>
 
-        <span>YOUR STORY</span>
+        <p>
+          From trailer production and launch content to author
+          publicity and editorial features, our aim is to help
+          authors present their work with clarity, creativity
+          and a memorable visual identity.
+        </p>
 
-        <strong>
-          DESERVES<br>
-          A SCREEN.
-        </strong>
-
-        <small>
-          PRAISE MOTION STUDIOS
-        </small>
-
+        <div class="about-signature">
+          <span class="signature-line"></span>
+          <span>Because every story deserves its moment.</span>
+        </div>
       </div>
 
     </div>
+  </section>
 
-    <div class="floating-word">
-      STORY
+
+  <!-- AUTOMATICALLY CHANGING GENRES -->
+  <section class="section genres" id="genres">
+    <div class="section-kicker">02 / STORIES WITHOUT LIMITS</div>
+
+    <div class="genre-intro">
+      <p class="small-label">WHAT KIND OF WORLD HAVE YOU WRITTEN?</p>
+      <h2>We bring every kind of story <em>into motion.</em></h2>
+      <p>
+        From imagined kingdoms to real-life journeys,
+        discover the worlds we can help bring to the screen.
+      </p>
     </div>
 
-  </div>
+    <div class="genre-display">
+      <span class="genre-overline">OUR CREATIVE WORLD INCLUDES</span>
 
-</section>
+      <div class="genre-stage" aria-live="off">
+        <span id="genreWord" class="genre-word">Fantasy</span>
+      </div>
+
+      <div class="genre-footer">
+        <span id="genreNumber">01 / 32</span>
+        <div class="genre-track">
+          <div id="genreProgress"></div>
+        </div>
+        <span>AND MANY MORE</span>
+      </div>
+    </div>
+  </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="section-kicker">03 / OUR CREATIVE SERVICES</div>
 
-<section id="about" class="about-section">
-
-  <div class="section-label">
-    WHO WE ARE
-  </div>
-
-  <div class="about-grid">
-
-    <div>
-
+    <div class="services-heading">
       <h2>
-        WE DON'T JUST
-        PROMOTE BOOKS.
-        <span>WE CREATE WORLDS.</span>
+        Your story.<br>
+        <em>Our creative direction.</em>
       </h2>
 
+      <p>
+        Thoughtful visual and promotional services for authors
+        who want their books to be presented with intention.
+      </p>
     </div>
 
-    <div class="about-text">
+    <div class="service-list">
 
-      <p>
-        Praise Motion Studios is a creative studio built around one simple idea:
-        <strong>every powerful book deserves a powerful visual story.</strong>
-      </p>
+      <article class="service-item">
+        <span class="service-number">01</span>
+        <div>
+          <h3>Cinematic Book Trailers</h3>
+          <p>
+            Short-form cinematic storytelling that introduces
+            the world, atmosphere and central appeal of your book.
+          </p>
+        </div>
+        <span class="service-arrow">↗</span>
+      </article>
 
-      <p>
-        We work with authors to transform the emotion, atmosphere,
-        characters and ideas inside their books into cinematic promotional
-        experiences designed to capture attention and create curiosity.
-      </p>
+      <article class="service-item">
+        <span class="service-number">02</span>
+        <div>
+          <h3>Book Launch Promotion</h3>
+          <p>
+            Creative promotional support to introduce an upcoming
+            release and build interest around its arrival.
+          </p>
+        </div>
+        <span class="service-arrow">↗</span>
+      </article>
 
-      <p>
-        From the first visual frame to the final call to action,
-        we help authors give their stories a presence beyond the page.
-      </p>
+      <article class="service-item">
+        <span class="service-number">03</span>
+        <div>
+          <h3>Social Media Campaigns</h3>
+          <p>
+            Book-focused promotional content, visual assets
+            and campaign materials for social platforms.
+          </p>
+        </div>
+        <span class="service-arrow">↗</span>
+      </article>
 
-      <p class="about-highlight">
-        Your manuscript is where the story begins.
-        <br>
-        <span>We help the world see it.</span>
-      </p>
+      <article class="service-item">
+        <span class="service-number">04</span>
+        <div>
+          <h3>Editorial & Media Features</h3>
+          <p>
+            Story-led editorial opportunities that give readers
+            another way to discover a book and its author.
+          </p>
+        </div>
+        <span class="service-arrow">↗</span>
+      </article>
+
+      <article class="service-item">
+        <span class="service-number">05</span>
+        <div>
+          <h3>Author Publicity</h3>
+          <p>
+            Creative presentation of an author's background,
+            inspiration and work to support their public profile.
+          </p>
+        </div>
+        <span class="service-arrow">↗</span>
+      </article>
+
+      <article class="service-item">
+        <span class="service-number">06</span>
+        <div>
+          <h3>Promotional Graphics</h3>
+          <p>
+            Carefully designed visual materials that complement
+            a book's identity and promotional direction.
+          </p>
+        </div>
+        <span class="service-arrow">↗</span>
+      </article>
 
     </div>
-
-  </div>
-
-</section>
+  </section>
 
 
-<!-- =========================
-     LIVE GENRES
-========================= -->
+  <!-- HOW WE WORK -->
+  <section class="section process">
+    <div class="section-kicker">04 / THE CREATIVE PROCESS</div>
 
-<section id="genres" class="genres-section">
+    <h2>From the first page<br>to the <em>final frame.</em></h2>
 
-  <div class="section-label">
-    STORIES WE BRING TO LIFE
-  </div>
+    <div class="process-grid">
+      <article>
+        <span>01</span>
+        <h3>Understand the story</h3>
+        <p>
+          We begin with your book, its audience and the feeling
+          you want readers to take away.
+        </p>
+      </article>
 
-  <h2 class="genre-heading">
-    EVERY GENRE HAS
-    <span>A WORLD WITHIN IT.</span>
-  </h2>
+      <article>
+        <span>02</span>
+        <h3>Shape the experience</h3>
+        <p>
+          We develop a visual direction that reflects the
+          character and personality of your work.
+        </p>
+      </article>
 
-  <div class="genre-stage">
-
-    <div class="genre-prefix">
-      WE CREATE TRAILERS FOR
+      <article>
+        <span>03</span>
+        <h3>Bring it to life</h3>
+        <p>
+          Your creative material is produced and prepared
+          for presentation and promotion.
+        </p>
+      </article>
     </div>
-
-    <div id="genreWord" class="genre-word">
-      FANTASY
-    </div>
-
-    <div class="genre-line"></div>
-
-    <p>
-      From impossible worlds to unforgettable characters,
-      we turn the atmosphere of your book into motion.
-    </p>
-
-  </div>
-
-</section>
+  </section>
 
 
-<!-- =========================
-     SERVICES
-========================= -->
+  <!-- PRICING -->
+  <section class="section pricing" id="pricing">
+    <div class="section-kicker">05 / WORK WITH US</div>
 
-<section id="services" class="services-section">
-
-  <div class="section-label">
-    WHAT WE CREATE
-  </div>
-
-  <h2>
-    FROM PAGE<br>
-    <span>TO SCREEN.</span>
-  </h2>
-
-
-  <div class="services-list">
-
-    <article class="service">
-      <span>01</span>
-
-      <div>
-        <h3>Cinematic Book Trailers</h3>
-
-        <p>
-          Trailer concepts designed to capture the mood,
-          emotion and visual identity of your book.
-        </p>
-      </div>
-    </article>
-
-
-    <article class="service">
-      <span>02</span>
-
-      <div>
-        <h3>Book Promotion</h3>
-
-        <p>
-          Strategic promotional campaigns created to put
-          your story in front of new audiences.
-        </p>
-      </div>
-    </article>
-
-
-    <article class="service">
-      <span>03</span>
-
-      <div>
-        <h3>Author Publicity</h3>
-
-        <p>
-          Creative visibility opportunities that help readers
-          discover the person and story behind the book.
-        </p>
-      </div>
-    </article>
-
-
-    <article class="service">
-      <span>04</span>
-
-      <div>
-        <h3>Editorial & Media Features</h3>
-
-        <p>
-          Story-focused features designed to give your book
-          another powerful place to be discovered.
-        </p>
-      </div>
-    </article>
-
-
-    <article class="service">
-      <span>05</span>
-
-      <div>
-        <h3>Social Media Promotion</h3>
-
-        <p>
-          Visual content and campaign assets built to create
-          attention around your book across social platforms.
-        </p>
-      </div>
-    </article>
-
-
-    <article class="service">
-      <span>06</span>
-
-      <div>
-        <h3>Book Launch Promotion</h3>
-
-        <p>
-          Creative promotional support designed to build
-          anticipation around your next release.
-        </p>
-      </div>
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PRICING
-========================= -->
-
-<section id="pricing" class="pricing-section">
-
-  <div class="section-label">
-    INVEST IN YOUR STORY
-  </div>
-
-  <h2>
-    CHOOSE THE
-    <span>EXPERIENCE.</span>
-  </h2>
-
-
-  <div class="pricing-grid">
-
-    <div class="price-card">
-
-      <div class="price-number">
-        01
-      </div>
-
-      <h3>
-        Author-Centric Trailer
-      </h3>
-
-      <div class="price">
-        $250
-      </div>
-
-      <p class="duration">
-        30 SECOND CINEMATIC TRAILER
+    <div class="pricing-heading">
+      <h2>Give your story<br><em>the presentation it deserves.</em></h2>
+      <p>
+        Choose a starting point for your project.
+        For expanded packages, contact us to discuss the scope.
       </p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <article class="price-item">
+        <span class="price-label">01 / STARTING EXPERIENCE</span>
+        <h3>Author-Centric Trailer</h3>
+        <div class="price">$250</div>
+        <p class="price-detail">30-second cinematic book trailer</p>
+        <p class="price-description">
+          A focused visual introduction created around
+          the atmosphere and story of your book.
+        </p>
+        <a href="#contact">Discuss this package ↗</a>
+      </article>
+
+      <article class="price-item price-featured">
+        <span class="price-label">02 / EXPANDED EXPERIENCE</span>
+        <h3>Premium Experience</h3>
+        <div class="price">$650</div>
+        <p class="price-detail">Scope available upon enquiry</p>
+        <p class="price-description">
+          An expanded creative option for authors looking
+          for a broader promotional presentation.
+        </p>
+        <a href="#contact">Discuss this package ↗</a>
+      </article>
+
+      <article class="price-item">
+        <span class="price-label">03 / SIGNATURE EXPERIENCE</span>
+        <h3>Signature Campaign</h3>
+        <div class="price">$1,200</div>
+        <p class="price-detail">Scope available upon enquiry</p>
+        <p class="price-description">
+          A tailored creative campaign shaped around
+          the individual needs of your book.
+        </p>
+        <a href="#contact">Discuss this package ↗</a>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-content">
+      <p class="section-kicker">06 / YOUR STORY STARTS HERE</p>
+
+      <h2>
+        Let's give your<br>
+        <em>book a moving image.</em>
+      </h2>
 
       <p>
-        A focused cinematic trailer created
-        around your book and its story.
+        Have a manuscript, a new release or a story ready
+        for its next chapter? Tell us about your project.
       </p>
 
-      <a href="#contact" class="price-button">
-        Start Here →
+      <a href="mailto:YOUR-EMAIL-HERE?subject=Book%20Trailer%20Enquiry" class="button button-light">
+        Start a conversation ↗
       </a>
-
     </div>
-
-
-    <div class="price-card featured">
-
-      <div class="price-number">
-        02
-      </div>
-
-      <h3>
-        Premium Experience
-      </h3>
-
-      <div class="price">
-        $650
-      </div>
-
-      <p class="duration">
-        DETAILS AVAILABLE UPON ENQUIRY
-      </p>
-
-      <p>
-        A more expansive creative experience
-        designed for authors seeking greater
-        visual impact.
-      </p>
-
-      <a href="#contact" class="price-button">
-        Discover More →
-      </a>
-
-    </div>
-
-
-    <div class="price-card">
-
-      <div class="price-number">
-        03
-      </div>
-
-      <h3>
-        Signature Campaign
-      </h3>
-
-      <div class="price">
-        $1,200
-      </div>
-
-      <p class="duration">
-        DETAILS AVAILABLE UPON ENQUIRY
-      </p>
-
-      <p>
-        A complete creative direction for authors
-        ready to give their book a larger presence.
-      </p>
-
-      <a href="#contact" class="price-button">
-        Discover More →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section id="contact" class="contact-section">
-
-  <div class="contact-inner">
-
-    <div class="section-label">
-      YOUR STORY STARTS HERE
-    </div>
-
-    <h2>
-      READY TO MAKE
-      <span>YOUR BOOK MOVE?</span>
-    </h2>
-
-    <p>
-      Tell us about your book, your vision and the world
-      you want readers to discover.
-    </p>
-
-    <a href="mailto:YOUR-EMAIL-HERE" class="contact-button">
-      LET'S CREATE SOMETHING →
-    </a>
-
-  </div>
-
-</section>
+  </section>
 
 </main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<footer class="footer">
+  <a href="#home" class="brand">
+    <span class="brand-name">PRAISE MOTION</span>
+    <span class="brand-subtitle">STUDIOS</span>
+  </a>
 
-<footer>
+  <p>Thoughtful storytelling. Cinematic presentation.</p>
 
-  <div class="footer-logo">
-    PRAISE MOTION STUDIOS
-  </div>
-
-  <p>
-    Where books become cinematic experiences.
-  </p>
-
-  <div class="footer-line"></div>
-
-  <small>
-    © 2026 Praise Motion Studios. All rights reserved.
-  </small>
-
+  <span class="copyright">
+    © <span id="year">2026</span> Praise Motion Studios
+  </span>
 </footer>
 
-
 <script src="script.js"></script>
-
 </body>
 </html>
