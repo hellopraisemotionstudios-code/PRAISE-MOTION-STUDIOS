@@ -1,269 +1,137 @@
-/* =========================================
-   PRAISE MOTION STUDIOS
-   CINEMATIC WEBSITE ANIMATIONS
-========================================= */
 
-
-/* =========================================
-   1. LIVE GENRE WORDS
-========================================= */
-
-const genreWord = document.getElementById("genreWord");
-
-const genres = [
-  "FANTASY",
-  "DARK ROMANCE",
-  "ROMANCE",
-  "THRILLER",
-  "MYSTERY",
-  "HORROR",
-  "SCI-FI",
-  "HISTORICAL FICTION",
-  "CRIME",
-  "SUSPENSE",
-  "PARANORMAL",
-  "ADVENTURE",
-  "DYSTOPIAN",
-  "LITERARY FICTION",
-  "YOUNG ADULT",
-  "CHILDREN'S",
-  "BIOGRAPHY",
-  "MEMOIR",
-  "SELF-HELP",
-  "BUSINESS",
-  "PSYCHOLOGY",
-  "PHILOSOPHY",
-  "SPIRITUALITY",
-  "POETRY",
-  "INSPIRATIONAL",
-  "EDUCATIONAL",
-  "COOKBOOKS",
-  "GRAPHIC NOVELS",
-  "TRUE CRIME",
-  "WOMEN'S FICTION"
-];
-
-let genreIndex = 0;
-
-function changeGenre() {
-
-  if (!genreWord) return;
-
-  genreWord.style.opacity = "0";
-  genreWord.style.transform = "translateY(25px)";
-
-  setTimeout(() => {
-
-    genreIndex++;
-
-    if (genreIndex >= genres.length) {
-      genreIndex = 0;
-    }
-
-    genreWord.textContent = genres[genreIndex];
-
-    genreWord.style.opacity = "1";
-    genreWord.style.transform = "translateY(0)";
-
-  }, 450);
-}
-
-setInterval(changeGenre, 2200);
-
-
-
-/* =========================================
-   2. LIVE HERO WORD
-========================================= */
-
-const heroWord = document.querySelector(".hero-word");
-
-const heroWords = [
-  "SEEN.",
-  "FELT.",
-  "REMEMBERED.",
-  "DISCOVERED.",
-  "UNFORGOTTEN."
-];
-
-let heroIndex = 0;
-
-function changeHeroWord() {
-
-  if (!heroWord) return;
-
-  heroWord.style.opacity = "0";
-  heroWord.style.transform = "translateY(15px)";
-
-  setTimeout(() => {
-
-    heroIndex++;
-
-    if (heroIndex >= heroWords.length) {
-      heroIndex = 0;
-    }
-
-    heroWord.textContent = heroWords[heroIndex];
-
-    heroWord.style.opacity = "1";
-    heroWord.style.transform = "translateY(0)";
-
-  }, 350);
-}
-
-setInterval(changeHeroWord, 2800);
-
-
-
-/* =========================================
-   3. MOVING PARTICLES
-========================================= */
-
-const particleContainer = document.createElement("div");
-
-particleContainer.className = "particle-container";
-
-document.body.appendChild(particleContainer);
-
-
-for (let i = 0; i < 45; i++) {
-
-  const particle = document.createElement("span");
-
-  particle.className = "particle";
-
-  particle.style.left =
-    Math.random() * 100 + "%";
-
-  particle.style.top =
-    Math.random() * 100 + "%";
-
-  particle.style.animationDuration =
-    (6 + Math.random() * 10) + "s";
-
-  particle.style.animationDelay =
-    (Math.random() * 8) + "s";
-
-  particleContainer.appendChild(particle);
-}
-
-
-
-/* =========================================
-   4. SCROLL REVEAL
-========================================= */
-
-const revealItems = document.querySelectorAll(
-  ".about-section, .service, .price-card, .contact-inner"
-);
-
-const revealObserver =
-  new IntersectionObserver(
-
-    (entries) => {
-
-      entries.forEach((entry) => {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("show");
-
-          revealObserver.unobserve(entry.target);
-
-        }
-
-      });
-
-    },
-
-    {
-      threshold: 0.12
-    }
-
-  );
-
-
-revealItems.forEach((item) => {
-
-  item.classList.add("reveal");
-
-  revealObserver.observe(item);
-
-});
-
-
-
-/* =========================================
-   5. MOUSE MOVEMENT
-========================================= */
-
-document.addEventListener("mousemove", (event) => {
-
-  const x =
-    (event.clientX / window.innerWidth - 0.5) * 20;
-
-  const y =
-    (event.clientY / window.innerHeight - 0.5) * 20;
-
-  const book =
-    document.querySelector(".book");
-
-  const lights =
-    document.querySelectorAll(".blue-light");
-
-  if (book) {
-
-    book.style.transform =
-      `perspective(1000px)
-       rotateY(${-20 + x * 0.25}deg)
-       rotateX(${5 - y * 0.15}deg)`;
-
+document.addEventListener("DOMContentLoaded", () => {
+
+  // AUTOMATIC GENRE DISPLAY
+  const genres = [
+    "Fantasy",
+    "Romance",
+    "Dark Romance",
+    "Mystery",
+    "Psychological Thriller",
+    "Horror",
+    "Science Fiction",
+    "Historical Fiction",
+    "Adventure",
+    "Crime",
+    "Suspense",
+    "Paranormal",
+    "Dystopian Fiction",
+    "Young Adult",
+    "Children's Fiction",
+    "Contemporary Fiction",
+    "Literary Fiction",
+    "Women's Fiction",
+    "Graphic Novels",
+    "Biography",
+    "Memoir",
+    "True Crime",
+    "History",
+    "Self-Help",
+    "Business",
+    "Psychology",
+    "Spirituality",
+    "Poetry",
+    "Cookbooks",
+    "Travel",
+    "Education",
+    "Inspirational"
+  ];
+
+  const genreWord = document.getElementById("genreWord");
+  const genreNumber = document.getElementById("genreNumber");
+  const genreProgress = document.getElementById("genreProgress");
+
+  let currentGenre = 0;
+
+  function displayGenre(index) {
+    if (!genreWord) return;
+
+    genreWord.classList.add("leaving");
+
+    window.setTimeout(() => {
+      genreWord.textContent = genres[index];
+
+      if (genreNumber) {
+        genreNumber.textContent =
+          String(index + 1).padStart(2, "0") +
+          " / " +
+          String(genres.length).padStart(2, "0");
+      }
+
+      if (genreProgress) {
+        genreProgress.style.width =
+          ((index + 1) / genres.length * 100) + "%";
+      }
+
+      genreWord.classList.remove("leaving");
+    }, 400);
   }
 
-  lights.forEach((light, index) => {
+  displayGenre(0);
 
-    const amount = index + 1;
+  const reducedMotion =
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    light.style.transform =
-      `translate(${x * amount}px, ${y * amount}px)`;
+  if (!reducedMotion && genreWord) {
+    window.setInterval(() => {
+      currentGenre = (currentGenre + 1) % genres.length;
+      displayGenre(currentGenre);
+    }, 3000);
+  }
 
-  });
 
-});
+  // MOBILE NAVIGATION
+  const menuToggle = document.getElementById("menuToggle");
+  const navigation = document.getElementById("navigation");
+
+  if (menuToggle && navigation) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navigation.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navigation.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 
 
+  // GENTLE SCROLL REVEAL
+  document.body.classList.add("js-ready");
 
-/* =========================================
-   6. BUTTON MAGNETIC EFFECT
-========================================= */
-
-const buttons =
-  document.querySelectorAll(
-    ".button, .contact-button, .price-button"
+  const revealTargets = document.querySelectorAll(
+    ".about-heading, .about-copy, .genre-intro, .genre-display, .services-heading, .service-item, .process-grid article, .price-item, .contact-content"
   );
 
-buttons.forEach((button) => {
-
-  button.addEventListener("mousemove", (event) => {
-
-    const rect =
-      button.getBoundingClientRect();
-
-    const x =
-      event.clientX - rect.left - rect.width / 2;
-
-    const y =
-      event.clientY - rect.top - rect.height / 2;
-
-    button.style.transform =
-      `translate(${x * 0.08}px, ${y * 0.08}px)`;
-
+  revealTargets.forEach(element => {
+    element.classList.add("reveal-on-scroll");
   });
 
-  button.addEventListener("mouseleave", () => {
+  if ("IntersectionObserver" in window && !reducedMotion) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
 
-    button.style.transform = "translate(0, 0)";
+    revealTargets.forEach(element => observer.observe(element));
+  } else {
+    revealTargets.forEach(element => element.classList.add("visible"));
+  }
 
-  });
+
+  // AUTOMATIC COPYRIGHT YEAR
+  const year = document.getElementById("year");
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
 });
